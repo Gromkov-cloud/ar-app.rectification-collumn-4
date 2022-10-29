@@ -1,0 +1,225 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    overflow: hidden;
+
+    font-family: sans-serif;
+}
+
+.models-list {
+    position: absolute;
+    bottom: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    right: 0;
+
+    z-index: -5;
+    display: none;
+}
+
+.models-list.open {
+    display: block;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.908);
+}
+
+.models-list ul {
+    padding: 150px 0 0 0;
+    list-style: none;
+    text-align: center;
+}
+
+.models-list li {
+    margin-bottom: 20px;
+}
+
+.models-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.models-list a.current {
+    color: rgb(172, 85, 85);
+}
+
+.models-list-open {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    padding: 10px 40px 10px 0;
+
+    background-color: rgba(255, 255, 255, 0.551);
+    font-size: 22px;
+    font-weight: 500;
+
+    z-index: 1001;
+
+    cursor: pointer;
+}
+
+.models-list-open span {
+    position: relative;
+
+    padding: 0 20px;
+}
+.models-list-open.active span::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 10px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: black;
+
+    -webkit-transform: rotate(45deg);
+
+    -ms-transform: rotate(45deg);
+
+    transform: rotate(45deg);
+}
+
+.models-list-open.active span::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: black;
+
+    -webkit-transform: rotate(135deg);
+
+    -ms-transform: rotate(135deg);
+
+    transform: rotate(135deg);
+}
+
+.models-list-open span::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 7px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: black;
+
+    -webkit-transform: rotate(0);
+
+    -ms-transform: rotate(0);
+
+    transform: rotate(0);
+}
+
+.models-list-open span::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: -30px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: black;
+
+    -webkit-transform: rotate(0);
+
+    -ms-transform: rotate(0);
+
+    transform: rotate(0);
+}
+
+.preloader-blur {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.698);
+}
+
+.preloader-blur.disabled {
+    display: none;
+}
+
+.preloader {
+    position: absolute;
+    z-index: 10002;
+    top: 50%;
+    right: 50%;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-transform: translate3d(50%, -50%, 0);
+
+    transform: translate3d(50%, -50%, 0);
+}
+
+.preloader span {
+    padding-top: 20px;
+}
+
+.model-info-bar {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+
+    padding: 10px 20px;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.551);
+
+    text-align: center;
+
+    border-radius: 8px;
+}
+
+.model-info-bar.active {
+    display: block;
+}
+
+.model-info-bar p {
+    padding: 0;
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+}
